@@ -190,3 +190,139 @@ form input, form textarea{
     padding-top: 20px;
     font-size: 0.9rem;
 }
+
+
+/* --- Responsividade --- */
+
+/* Tablets e Celulares Grandes */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    nav {
+        flex-direction: column; /* Coloca a logo acima do menu */
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que os itens do menu quebrem linha se necessário */
+        justify-content: center;
+    }
+
+    nav ul li a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .apresentacao h1 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-container {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .placeholder-img img {
+        width: 100%; /* Imagem se ajusta à largura da tela */
+        height: auto;
+    }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+    .apresentacao {
+        height: auto;
+        padding: 60px 20px;
+        background-size: cover; /* Melhora a visualização do fundo no telemóvel */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vira uma lista vertical */
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        margin-left: 0;
+    }
+
+    .footer-grid {
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+}
+
+
+/* --- Micro-Responsividade (Telas menores que 360px) --- */
+
+@media (max-width: 360px) {
+    /* Ajuste do Header */
+    header {
+        padding: 0.5rem 2%;
+    }
+
+    nav .logo {
+        font-size: 1.2rem; /* Diminui a logo para não ocupar espaço demais */
+    }
+
+    /* Hero Section / Apresentação */
+    .apresentacao {
+        padding: 40px 10px;
+    }
+
+    .apresentacao h1 {
+        font-size: 1.5rem; /* Título menor para evitar quebra de palavras */
+        word-wrap: break-word;
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+    }
+
+    /* Ajuste de Botões */
+    button {
+        width: 100%; /* Botão ocupa a largura toda para facilitar o toque */
+        padding: 12px 10px;
+    }
+
+    /* Secção Sobre e Serviços */
+    #servicos, #sobre, #contacto {
+        padding: 30px 3%; /* Reduz o respiro lateral para ganhar espaço de conteúdo */
+    }
+
+    .sobre-texto h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Ajuste dos Cards de Serviço */
+    .grid-servicos {
+        grid-template-columns: 1fr; /* Força uma coluna única absoluta */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    /* Formulário de Contacto */
+    form {
+        width: 100%;
+    }
+
+    form input, form textarea {
+        font-size: 14px; /* Evita zoom automático em alguns navegadores mobile */
+    }
+
+    /* Footer */
+    .footer-completo {
+        padding: 40px 5% 20px;
+    }
+
+    .footer-col h3 {
+        font-size: 1.1rem;
+    }
+}
